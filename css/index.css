@@ -46,32 +46,34 @@ The designs were created to the following widths:
   font-weight: 700;
 }
 
-
-body {
-  background-color: hsl(30, 38%, 92%);
-  padding-top: 100px;
+* {
+  box-sizing: border-box;
 }
-
+.main_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(30, 38%, 92%);
+  height: 800px;
+}
 .prod_preview{
   display: flex;
+  flex-direction: row;
   background-color:white;
   margin: auto;
-  border-radius: 12px;
   box-shadow: 0px 0px 6px #615b5785;
-  width: 500px;
-  height: 350px;
-  justify-content: center;
 }
 .image_container {
-  flex: 50%;
-  float: left;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  width: 250px;
+  height: 350px;
+  border-radius: 10px;
   overflow: hidden;
 }
-.content {
-  flex: 50%;
-  float: left;
+.content_container {
+  width: 250px;
+  height: 350px;
+  background-color: white;
+  border-radius: 10px;
   padding: 20px;
 }
 
@@ -121,9 +123,9 @@ button img {
   margin-right: 20px;
 }
 
-@media screen and (max-width: 375px) {
-  .image_container, .content {
-    /*flex: 100%;*/
-    width:1000px;/* The width is 100%, when the viewport is 800px or smaller */
-  }
+@media (max-width: 400px) {
+   .prod_preview {
+     flex-direction: column;
+   }
+
 }
