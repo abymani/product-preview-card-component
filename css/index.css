@@ -1,0 +1,129 @@
+/*# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 14px
+
+### Font
+
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- Weights: 500, 700
+
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700
+
+*/
+@font-face {
+  font-family: 'montserrat';
+  src :url(https://fonts.google.com/specimen/Montserrat);
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'fraunces';
+  src :url(https://fonts.google.com/specimen/Fraunces);
+  font-weight: 700;
+}
+
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  padding-top: 100px;
+}
+
+.prod_preview{
+  display: flex;
+  background-color:white;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0px 0px 6px #615b5785;
+  width: 500px;
+  height: 350px;
+  justify-content: center;
+}
+.image_container {
+  flex: 50%;
+  float: left;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  overflow: hidden;
+}
+.content {
+  flex: 50%;
+  float: left;
+  padding: 20px;
+}
+
+#prev {
+  color: hsl(228, 12%, 48%);
+  font-family: 'montserrat';
+  font-weight: 500;
+}
+
+#heading {
+  color: hsl(212, 21%, 14%);
+  font-size: 25px;
+  font-weight: 700;
+}
+#desc {
+  color: hsl(228, 12%, 48%);
+  font-family: 'montserrat';
+  font-weight: 500;
+}
+#discounted_price {
+  color: hsl(158, 36%, 37%);
+  font-size: 40px;
+  font-weight: 700;
+}
+#price {
+  color: hsl(228, 12%, 48%);
+  margin-left: 10px;
+  position: relative;
+  text-decoration: line-through;
+}
+#cart_button {
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+  padding: 5px;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  font-family: 'fraunces';
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: none;
+
+
+}
+button img {
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 375px) {
+  .image_container, .content {
+    /*flex: 100%;*/
+    width:1000px;/* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
