@@ -93,11 +93,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
-
+}
+#cart_button:hover {
+  cursor: pointer;
+  background-color: hsl(212, 21%, 14%)
 }
 button img {
-  margin-right: 10px;
+  margin-right: 10px; 
 }
 
 @media (max-width: 500px) {
